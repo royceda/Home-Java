@@ -19,6 +19,15 @@ public class Kruskal{
 	edgeList   = new ArrayList<Edge>();
     }
 
+    public ArrayList<Edge> getEdgeList(){
+	return edgeList;
+    }
+
+    public ArrayList<Edge> getVertexList(){
+	return vertexlist;
+    }
+
+
     public void readFile(String name) throws IOException {
 	File    fichier = new File(name);
 	Scanner reader  = new Scanner(fichier);
@@ -31,14 +40,14 @@ public class Kruskal{
 
     /**
      * Kruskal(G, w) :
-     * 1   A := vide                   +
-     * 2   pour chaque sommet v de G : +
-     * 3      creerEnsemble(v)         +
+     * 1   A := vide                                                           +
+     * 2   pour chaque sommet v de G :                                         +
+     * 3      creerEnsemble(v)                                                 +
      * 4   trier les aretes de G par ordre croissant de poids w                +
      * 5   pour chaque arete (u, v) de G prise par ordre de poids croissant :  +
      * 6      si find(u) != find(v) :                                          +
      * 7         ajouter l'arete (u, v) a l'ensemble A                         +
-     * 8         union(u, v) //problem??
+     * 8         union(u, v)                                                   //problem??
      * 9   retourner A
      */
 

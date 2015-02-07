@@ -33,7 +33,7 @@ public class Kruskal{
 	Scanner reader  = new Scanner(fichier);
 		
 	while(reader.hasNextInt()) {
-	    vertexList.add(new Vertex(reader.nextDouble(), reader.nextDouble(), reader.nextDouble()));
+	    vertexList.add(new Vertex(reader.nextInt(), reader.nextDouble(), reader.nextDouble()));
 	}
     }
 
@@ -56,13 +56,15 @@ public class Kruskal{
 	ArrayList<Edge>   A = new ArrayList<Edge>();
 	Edge tmp = new Edge();
 	
+
 	Iterator<Edge> it = edgeList.iterator();
 	Collections.sort(edgeList); 
 
+	A.add(it.next());
 	while(it.hasNext()){
 	    tmp = it.next();
-
-	    if( !S.contains(tmp.getV1()) && S.contains(tmp.getV2())){
+	    
+	    if( S.contains(tmp.getV1()) != S.contains(tmp.getV2())){
 		S.add(tmp.getV1());
 		S.add(tmp.getV2());
 		A.add(tmp);

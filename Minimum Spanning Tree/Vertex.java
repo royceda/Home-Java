@@ -3,8 +3,9 @@ package graph.model;
 
 
 public class Vertex{
-    private double number;
+    private int    number;
     private double abs, ord;
+   
 
 
     public Vertex(){
@@ -13,7 +14,7 @@ public class Vertex{
 	ord    = 0;
     }
 
-    public Vertex(double v, double a, double ord){
+    public Vertex(int v, double a, double ord){
 	number = v;
 	abs    = a;
 	ord    = ord;
@@ -24,7 +25,7 @@ public class Vertex{
 	return Math.sqrt( Math.pow((abs - v.abs), 2) + Math.pow((ord - v.ord), 2));
     }
     
-    public double getNumber(){
+    public int getNumber(){
 	return number;
     }
 
@@ -36,6 +37,7 @@ public class Vertex{
 	return ord;
     }
 
+  
 
 
 }

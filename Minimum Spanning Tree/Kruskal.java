@@ -11,8 +11,8 @@ public Kruskal{
 	File    fichier = new File(name);
 	Scanner reader  = new Scanner(fichier);
 		
-	while(lecteur.hasNextInt()) {
-	    sommets.add(new Sommet(lecteur.nextInt(), lecteur.nextInt(), lecteur.nextInt()));
+	while(reader.hasNextInt()) {
+	    sommets.add(new Sommet(reader.nextInt(), reader.nextInt(), reader.nextInt()));
 	}
     }
 

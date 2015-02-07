@@ -23,8 +23,8 @@ public class Kruskal{
 	return edgeList;
     }
 
-    public ArrayList<Edge> getVertexList(){
-	return vertexlist;
+    public ArrayList<Vertex> getVertexList(){
+	return vertexList;
     }
 
 

@@ -13,7 +13,7 @@ public class Vertex{
 	ord    = 0;
     }
 
-    public Vertex(int v, int a, int ord){
+    public Vertex(double v, double a, double ord){
 	number = v;
 	abs    = a;
 	ord    = ord;

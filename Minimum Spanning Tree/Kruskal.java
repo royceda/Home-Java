@@ -33,7 +33,7 @@ public class Kruskal{
 	Scanner reader  = new Scanner(fichier);
 		
 	while(reader.hasNextInt()) {
-	    vertexList.add(new Vertex(reader.nextInt(), reader.nextInt(), reader.nextInt()));
+	    vertexList.add(new Vertex(reader.nextDouble(), reader.nextDouble(), reader.nextDouble()));
 	}
     }
 

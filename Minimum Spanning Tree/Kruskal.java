@@ -36,9 +36,9 @@ public class Kruskal{
      * 3      creerEnsemble(v)         +
      * 4   trier les aretes de G par ordre croissant de poids w                +
      * 5   pour chaque arete (u, v) de G prise par ordre de poids croissant :  +
-     * 6      si find(u) != find(v) :
-     * 7         ajouter l'arete (u, v) a l'ensemble A
-     * 8         union(u, v)
+     * 6      si find(u) != find(v) :                                          +
+     * 7         ajouter l'arete (u, v) a l'ensemble A                         +
+     * 8         union(u, v) //problem??
      * 9   retourner A
      */
 
@@ -58,7 +58,6 @@ public class Kruskal{
 		S.add(tmp.getV2());
 		A.add(tmp);
 	    }
-
 	}
 	return A;
     }

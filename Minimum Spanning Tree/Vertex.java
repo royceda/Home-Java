@@ -3,8 +3,8 @@ package graph.model;
 
 
 public class Vertex{
-    private int number;
-    private int abs, ord;
+    private double number;
+    private double abs, ord;
 
 
     public Vertex(){
@@ -18,16 +18,21 @@ public class Vertex{
 	abs    = a;
 	ord    = ord;
     }
+
+
+    public double distance(Vertex v){
+	return Math.sqrt( Math.pow((abs - v.abs), 2) + Math.pow((ord - v.ord), 2));
+    }
     
-    public int getNumber(){
+    public double getNumber(){
 	return number;
     }
 
-    public int getAbs(){
+    public double getAbs(){
 	return abs;
     }
 
-    public int getOrd(){
+    public double getOrd(){
 	return ord;
     }
 

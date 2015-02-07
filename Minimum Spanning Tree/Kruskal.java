@@ -38,6 +38,14 @@ public class Kruskal{
     }
 
 
+    public void Buildedgess() {
+	int i, j, n;
+	n = vertexList.size();
+	for (i = 0; i < n - 1; i++)
+	    for (j = i + 1; j < n; j++)
+		edgeList.add(new Edge(vertexList.get(i), vertexList.get(j)));
+    }
+
     /**
      * Kruskal(G, w) :
      * 1   A := vide                                                           +
@@ -52,11 +60,10 @@ public class Kruskal{
      */
 
     public ArrayList<Edge> kruskal(){
-	ArrayList<Vertex> S = new ArrayList<Vertex>();
-	ArrayList<Edge>   A = new ArrayList<Edge>();
-	Edge tmp = new Edge();
+	ArrayList<Vertex> S   = new ArrayList<Vertex>();
+	ArrayList<Edge>   A   = new ArrayList<Edge>();
+	Edge              tmp = new Edge();
 	
-
 	Iterator<Edge> it = edgeList.iterator();
 	Collections.sort(edgeList); 
 

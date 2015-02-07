@@ -10,6 +10,11 @@ public class Edge implements Comparable<Edge>{
 	v2 = new Vertex();
     }
     
+    public Edge(Vertex u, Vertex v){
+	v1 = u;
+	v2 = v;
+    }
+
     public void setVertex(Vertex u, Vertex v){
 	v1 = u;
 	v2 = v;

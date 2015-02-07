@@ -28,6 +28,7 @@ public class Edge implements Comparable<Edge>{
 	return v1.distance(v2);
     }
 
+
     public int compareTo(Edge a){
 	if(v1.distance(v2) < a.v1.distance(a.v2))
 	    return 1;

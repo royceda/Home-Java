@@ -38,13 +38,20 @@ public class Kruskal{
     }
 
 
-    public void Buildedgess() {
+    public void buildEdge() {
 	int i, j, n;
 	n = vertexList.size();
 	for (i = 0; i < n - 1; i++)
 	    for (j = i + 1; j < n; j++)
 		edgeList.add(new Edge(vertexList.get(i), vertexList.get(j)));
     }
+
+    public void display() {
+	System.out.println("Aretes de l'arbre couvrant de poids minimum : ");
+	for (Edge e : edgeList  ) System.out.println(e.getV1().getNumber() + ", " +
+						   e.getV2().getNumber() );
+    }
+
 
     /**
      * Kruskal(G, w) :

@@ -12,6 +12,16 @@ public class Main{
 	System.out.println("file: "+args[0]);
 	Kruskal graph = new Kruskal();
 	graph.readFile(args[0]);
+	graph.buildEdge();
 	ArrayList<Edge> edges = graph.kruskal();
+
+
+
+	System.out.println("Aretes de l'arbre couvrant de poids minimum : ");
+	for (Edge e : edges  ) System.out.println(e.getV1().getNumber() + ", " +
+						     e.getV2().getNumber() );
+	
+
+
     }
 }

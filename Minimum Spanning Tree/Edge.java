@@ -1,5 +1,8 @@
 package graph.model;
 
+import java.awt.Graphics;
+
+
 public class Edge implements Comparable<Edge>{
     private Vertex v1;
     private Vertex v2;

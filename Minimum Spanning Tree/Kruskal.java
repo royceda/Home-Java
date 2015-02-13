@@ -63,13 +63,15 @@ public class Kruskal{
 	ArrayList<Vertex> S   = new ArrayList<Vertex>();
 	ArrayList<Edge>   A   = new ArrayList<Edge>();
 	Edge              tmp = new Edge();
-	
-	Iterator<Edge> it = edgeList.iterator();
-	Collections.sort(edgeList); 
 
-	A.add(it.next());
-	while(it.hasNext()){
-	    tmp = it.next();
+
+	//Iterator<Edge> it = edgeList.iterator();
+	Collections.sort(edgeList); 
+	tmp = edgeList.get(1);
+
+	A.add(tmp);
+	for(int i=1; i < edgeList.size(); ++i){
+	    tmp = edgeList.get(i);
 	    
 	    if( S.contains(tmp.getV1()) != S.contains(tmp.getV2())){
 		S.add(tmp.getV1());

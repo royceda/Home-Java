@@ -1,6 +1,7 @@
 package graph.model;
 
-
+import java.awt.Color;
+import java.awt.Graphics;
 
 public class Vertex{
     private int    number;

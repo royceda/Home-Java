@@ -1,50 +1,32 @@
-package graph.model;
+package kruskal;
 
 import java.awt.Graphics;
 
+public class Edge implements Comparable<Vertex> {
+	private Vertex extr1, extr2;
 
-public class Edge implements Comparable<Edge>{
-    private Vertex v1;
-    private Vertex v2;
+	public Edge(Vertex extr1, Vertex extr2) {
+		this.extr1 = extr1;
+		this.extr2 = extr2;
+	}
 
+	public Vertex getExtr1() {
+		return extr1;
+	}
 
-    public Edge(){
-	v1 = new Vertex();
-	v2 = new Vertex();
-    }
-    
-    public Edge(Vertex u, Vertex v){
-	v1 = u;
-	v2 = v;
-    }
+	public Vertex getExtr2() {
+		return extr2;
+	}
 
-    public void setVertex(Vertex u, Vertex v){
-	v1 = u;
-	v2 = v;
-    }
-    
-    public Vertex getV1(){
-	return v1;
-    }
-    
-    public Vertex getV2(){
-	return v2;
-    }
-
-
-    public double distance(){
-	return v1.distance(v2);
-    }
-
-
-    public int compareTo(Edge a){
-	if(v1.distance(v2) < a.v1.distance(a.v2))
-	    return 1;
-	else if (v1.distance(v2) == a.v1.distance(a.v2))
-	    return -1;
-	else
-	    return 0;	
-    }
+	public double longueur() {
+		int x1 = extr1.getAbs(), y1 = extr1.getOrd();
+		int x2 = extr2.getAbs(), y2 = extr2.getOrd();
+		return Math.sqrt((x2 - x1) * (x2 - x1) + (y2 - y1) * (y2 - y1));
+	}
+	public int compareTo(Arete autre) {
+		double l1 = this.longueur() , l2 = autre.longueur();
+		if (l1 < l2) return -1;
+		if (l1 > l2) return 1;
+		return 0;
+	}
 }
-
-
